@@ -1,6 +1,7 @@
 <script>
 	import Gallery from '$lib/shared/components/gallery/Gallery.svelte';
 	import Hero from '$lib/shared/components/hero/Hero.svelte';
+	import Result from '$lib/shared/components/result/Result.svelte';
 	import Support from '$lib/shared/components/support/Support.svelte';
 </script>
 
@@ -8,4 +9,5 @@
 	<Hero />
 	<Support />
 	<Gallery />
+	<Result />
 </div>
