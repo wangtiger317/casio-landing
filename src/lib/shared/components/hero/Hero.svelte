@@ -2,10 +2,12 @@
 	import heroLogo from '$lib/assets/hero-logo.png';
 	import reviews from '$lib/assets/reviews.svg';
 	import Header from '$lib/shared/ui/components/headers/Header.svelte';
+	export let user;
+	console.log(user);
 </script>
 
 <div class="flex flex-col items-center justify-center w-full" id="hero">
-	<Header />
+	<Header {user} />
 	<img src={heroLogo} alt="" />
 	<div class="flex flex-col items-center justify-center w-full">
 		<span class="font-bold text-white text-[36px] text-center"> Rago Optimizer </span>

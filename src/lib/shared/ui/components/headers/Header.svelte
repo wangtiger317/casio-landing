@@ -1,6 +1,7 @@
 <script>
 	import logo from '$lib/assets/logo.png';
 	import discord from '$lib/assets/discord.png';
+	export let user;
 </script>
 
 <div
@@ -14,8 +15,19 @@
 	</div>
 	<div class="flex items-center gap-2">
 		<img src={discord} alt="discord Logo" class="mt-2" />
-		<button class="bg-[#FE3030] rounded-full py-2.5 px-3.5 text-white font-semibold">
-			Download
-		</button>
+		{#if user}
+			<form method="POST" action="/logout">
+				<button
+					type="submit"
+					class="bg-[#FE3030] rounded-full py-2.5 px-3.5 text-white font-semibold"
+				>
+					Log out
+				</button>
+			</form>
+		{:else}
+			<a href="/register" class="bg-[#FE3030] rounded-full py-2.5 px-3.5 text-white font-semibold">
+				Register
+			</a>
+		{/if}
 	</div>
 </div>
